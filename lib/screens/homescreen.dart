@@ -164,77 +164,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: _floatButton(),
-      bottomNavigationBar: GlassmorphicContainer(
-        width: AppValues.screenWidth(context),
-        height: 80,
-        borderRadius: 0,
-        linearGradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [
-            AppColors.pink.withOpacity(0.2),
-            AppColors.lightGreen.withOpacity(0.2),
-          ],
-        ),
-        border: 0,
-        blur: 30,
-        borderGradient: const LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [
-            AppColors.pink,
-            AppColors.lightGreen,
-          ],
-        ),
-        child: Center(
-          child: BottomAppBar(
-            color: Colors.transparent,
-            notchMargin: 4,
-            elevation: 0,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: SvgPicture.asset(
-                      Assets.icons.icHome,
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: SvgPicture.asset(
-                      Assets.icons.icPlay,
-                    ),
-                  ),
-                ),
-                const Expanded(
-                  child: Text(''),
-                ),
-                Expanded(
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: SvgPicture.asset(
-                      Assets.icons.icBookmark,
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: SvgPicture.asset(
-                      Assets.icons.icDownload,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
+      bottomNavigationBar: _bottomNav(),
     );
   }
 
@@ -275,6 +205,80 @@ class _HomeScreenState extends State<HomeScreen> {
           shape: const CircleBorder(),
           fillColor: const Color(0xFF404c57),
           child: SvgPicture.asset(Assets.icons.icAdd),
+        ),
+      ),
+    );
+  }
+
+  Widget _bottomNav() {
+    return GlassmorphicContainer(
+      width: AppValues.screenWidth(context),
+      height: 80,
+      borderRadius: 0,
+      linearGradient: LinearGradient(
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+        colors: [
+          AppColors.pink.withOpacity(0.2),
+          AppColors.lightGreen.withOpacity(0.2),
+        ],
+      ),
+      border: 0,
+      blur: 30,
+      borderGradient: const LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [
+          AppColors.pink,
+          AppColors.lightGreen,
+        ],
+      ),
+      child: Center(
+        child: BottomAppBar(
+          color: Colors.transparent,
+          notchMargin: 4,
+          elevation: 0,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                child: IconButton(
+                  onPressed: () {},
+                  icon: SvgPicture.asset(
+                    Assets.icons.icHome,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: IconButton(
+                  onPressed: () {},
+                  icon: SvgPicture.asset(
+                    Assets.icons.icPlay,
+                  ),
+                ),
+              ),
+              const Expanded(
+                child: Text(''),
+              ),
+              Expanded(
+                child: IconButton(
+                  onPressed: () {},
+                  icon: SvgPicture.asset(
+                    Assets.icons.icBookmark,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: IconButton(
+                  onPressed: () {},
+                  icon: SvgPicture.asset(
+                    Assets.icons.icDownload,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -77,11 +77,35 @@ class $AssetsImagesGen {
       ];
 }
 
+class $AssetsMaskGen {
+  const $AssetsMaskGen();
+
+  /// File path: assets/mask/mask.png
+  AssetGenImage get mask => const AssetGenImage('assets/mask/mask.png');
+
+  /// File path: assets/mask/mask_cast.png
+  AssetGenImage get maskCast =>
+      const AssetGenImage('assets/mask/mask_cast.png');
+
+  /// File path: assets/mask/mask_firstIndex.png
+  AssetGenImage get maskFirstIndex =>
+      const AssetGenImage('assets/mask/mask_firstIndex.png');
+
+  /// File path: assets/mask/mask_lastIndex.png
+  AssetGenImage get maskLastIndex =>
+      const AssetGenImage('assets/mask/mask_lastIndex.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values =>
+      [mask, maskCast, maskFirstIndex, maskLastIndex];
+}
+
 class Assets {
   Assets._();
 
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsMaskGen mask = $AssetsMaskGen();
 }
 
 class AssetGenImage {

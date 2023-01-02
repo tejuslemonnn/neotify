@@ -4,20 +4,20 @@ import 'package:neotify/utils/AppColors.dart';
 import 'package:neotify/utils/AppValues.dart';
 
 class SearchWidget extends StatelessWidget {
-  const SearchWidget(
-      {Key? key,
-      this.appBarTitleText,
-      this.appBarTrailing,
-      required this.padding})
-      : super(key: key);
+  const SearchWidget({
+    Key? key,
+    this.appBarTitleText,
+    this.appBarTrailing,
+    this.padding,
+  }) : super(key: key);
   final Widget? appBarTitleText;
   final Widget? appBarTrailing;
-  final EdgeInsetsGeometry padding;
+  final EdgeInsetsGeometry? padding;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: padding,
+      padding: padding ?? const EdgeInsets.symmetric(horizontal: 20),
       decoration: const BoxDecoration(
         boxShadow: [
           BoxShadow(
